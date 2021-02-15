@@ -16,17 +16,19 @@
         </div>
         <div class="row">
             <div class="col">
-                <img class="img-fluid" src="images/5AD591F8-88D5-4E52-8B41-328BFD1D19B1_1_102_o.jpeg" alt="Meme photo of me" >
+                <img class="img-fluid image-toggle" id="img1" src="images/5AD591F8-88D5-4E52-8B41-328BFD1D19B1_1_102_o.jpeg" alt="Meme photo of Patterson" />
+                <img class="img-fluid image-toggle" id="img2" src="images/RenderedImage.jpeg" alt="Meme photo of me" style="display: none;"/>
+                <img class="img-fluid image-toggle" id="img3" src="images/IMG_7250.JPG" alt="Nature photo of me" style="display: none;"/>
             </div>
             <div class="col">
                 <div class="row">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-primary image-toggler" data-image-id="#img1">Meme Photo</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary image-toggler" data-image-id="#img2">Fried Photo</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-primary image-toggler" data-image-id="#img3">Nature Photo</button>
                 </div>
             </div>
         </div>
@@ -36,5 +38,11 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        $('.image-toggler').click(function(){
+            $('.image-toggle').hide();
+            $($(this).attr('data-image-id')).show();
+        })
+    </script>
   </body>
 </html>
