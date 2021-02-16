@@ -11,27 +11,33 @@
   </head>
   <body>
     <div class="container-fluid">
-        <div class="col">
+        <div class="col text-center">
             <h1> Bootstrap Sample </h1>
         </div>
         <div class="row">
-            <div class="col-5">
+            <div class="col-md text-center">
+                <button type="button" class="btn btn-primary image-toggler" data-image-id="#img1">Meme Photo</button>
+            </div>
+            <div class="col-md text-center">
+                <button type="button" class="btn btn-secondary image-toggler" data-image-id="#img2">Fried Photo</button>
+            </div>
+            <div class="col-md text-center">
+                <button type="button" class="btn btn-primary image-toggler" data-image-id="#img3">Nature Photo</button>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-6 text-center">
                 <img class="img-fluid image-toggle" id="img1" src="images/5AD591F8-88D5-4E52-8B41-328BFD1D19B1_1_102_o.jpeg" alt="Meme photo of Patterson" style="display: none;"/>
                 <img class="img-fluid image-toggle" id="img2" src="images/RenderedImage.jpeg" alt="Meme photo of me" style="display: none;"/>
                 <img class="img-fluid image-toggle" id="img3" src="images/IMG_7250.JPG" alt="Nature photo of me" />
             </div>
-            <div class="col-10">
-                <div class="row">
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-primary image-toggler" data-image-id="#img1">Meme Photo</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-secondary image-toggler" data-image-id="#img2">Fried Photo</button>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-primary image-toggler" data-image-id="#img3">Nature Photo</button>
-                    </div>
-                </div>
+        </div>
+        <div class="row text-center">
+            <div class="col text-center">
+                <h2 class="text-center-fluid"> Click a button to change photo</h2>
             </div>
         </div>
     </div>
